@@ -1,0 +1,523 @@
+/*****************Home page***********/
+body{
+    font-family: "roboto", sans-serif;
+    font-weight: 300;
+    font-style: normal;
+    font-size: 20px;
+    
+}
+.main {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    margin: 200px;
+}
+.edit-img{
+    height: 50px;
+}
+.logo-img {
+    height: 200px;
+}
+.search-img{
+    height: 35px;
+}
+
+button {
+    background-color: #4CAF50;
+    border: none;
+    padding: 15px 32px;
+    text-align: center;
+    margin-top: 20px;
+    margin-bottom: 0px;
+    cursor: pointer;
+    border-radius: 12px;
+    color: white;
+    font-size: 16px;
+}
+button:hover {
+    background-color: #3e8e41;
+}
+.para {
+    margin: 0px;
+}
+a {
+    text-decoration: none;
+}
+.user{
+    display: flex;
+    gap: 15px;
+}
+.searchText{
+    display: flex;
+    align-items: center;
+}
+.searchRoom {
+    color: white;
+}
+.postRoom {
+    color: gray;
+}
+.postRoom:hover {
+    text-decoration: underline;
+}
+
+/***********Search Room**************/
+.mainForm {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    margin: 100px;
+}
+.userInput {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 20px;
+    width: 80%;
+    max-width: 600px;
+}
+.input {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 5px;
+    justify-content: center;
+
+}
+
+.sub-township-group {
+    display: none;
+}
+.error {
+    color: red;
+    font-size: 0.8em;
+    margin-top: 5px;
+}
+.common {
+    display: flex;
+    flex-direction: column;
+}
+.userSearch {
+    color: white;
+}
+.checkboxes {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 5px;
+}
+.btnDiv {
+    display: flex;
+    gap: 20px;
+    margin-top: 20px;
+}
+
+.userInput input[type="text"],
+.userInput input[type="number"],
+.userInput input[type="tel"],
+.userInput select {
+    width: 100%;
+    padding: 8px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+}
+/***********Post Room**************/
+.mainPost {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    max-width: 800px;
+    margin: 0 auto;
+}
+.mainPost form {
+    width: 100%;
+}
+.mainPost .postDiv-1,
+.mainPost .postDiv-2,
+.mainPost .postDiv-3,
+.mainPost .postDiv-4,
+.mainPost .postDiv-5,
+.mainPost .postDiv-6,
+.mainPost .postDiv-7,
+.mainPost .postDiv-8,
+.mainPost .postDiv-9,
+.mainPost .postDiv-10 {
+    margin-bottom: 20px;
+}
+.mainPost label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+.mainPost input[type="text"],
+.mainPost input[type="number"],
+.mainPost input[type="tel"],
+.mainPost select {
+    width: 100%;
+    padding: 8px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+}
+.items{
+    display: flex;
+    flex-direction: row;
+    gap: 5px;
+}
+.other{
+    margin-top: 20px;
+}
+.frame {
+    border: 2px dashed #0A400C;
+    border-radius: 12px;
+    padding: 10px;
+    height: 150px;
+    width: 150px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    position: relative;
+}
+.add-img {
+    width: 50px;
+    height: 50px;
+    cursor: pointer;
+}
+.frameMain {
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+.preview-img {
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: contain;
+}
+
+.postDiv-10{
+    display: flex;
+    justify-content: space-between;
+}
+.back-btn{
+    color: white;
+}
+.submit-btn, .userSearch{
+    margin-bottom: 20px;
+}
+/***********Search Results**************/
+.results-container {
+    max-width: 1200px;
+    margin: 20px auto;
+    padding: 20px;
+}
+.rooms-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+    gap: 20px;
+    margin-top: 20px;
+}
+.room-card {
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+.room-images {
+    height: 200px;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #f5f5f5;
+}
+.room-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.room-details {
+    padding: 15px;
+}
+.room-details h3 {
+    margin: 0 0 10px 0;
+    color: #333;
+}
+.rent {
+    font-size: 1.2em;
+    font-weight: bold;
+    color: #4CAF50;
+    margin: 10px 0;
+}
+.features-list {
+    list-style: none;
+    padding: 0;
+    margin: 10px 0;
+}
+.features-list li {
+    margin-bottom: 5px;
+    padding-left: 20px;
+    position: relative;
+}
+.features-list li:before {
+    content: "✓";
+    position: absolute;
+    left: 0;
+    color: #4CAF50;
+}
+.contact-btn {
+    width: 100%;
+    margin-top: 15px;
+    padding: 10px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+.contact-btn:hover {
+    background-color: #3e8e41;
+}
+.back-btn {
+    margin-bottom: 20px;
+}
+
+@media (max-width: 768px) {
+    .main {
+        margin: 50px 20px;
+    }
+    .mainForm {
+        margin: 50px 20px;
+    }
+    .rooms-list {
+        grid-template-columns: 1fr;
+    }
+    .frameMain {
+        flex-direction: column;
+        align-items: center;
+    }
+}
+
+/****************View Posting*************************/
+/* View Posting Page Styles */
+.room-container {
+    max-width: 800px;
+    margin: 20px auto;
+    padding: 20px;
+    background: white;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+}
+
+.posted-room-header {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.success-message {
+    color: #4CAF50;
+    font-weight: bold;
+}
+
+.room-images-container {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 20px;
+    flex-wrap: wrap;
+}
+
+.room-image-container {
+    flex: 1;
+    min-width: 250px;
+    height: 200px;
+    overflow: hidden;
+    border-radius: 8px;
+}
+
+.room-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.room-details {
+    padding: 15px;
+}
+
+.rent {
+    font-size: 1.4em;
+    color: #4CAF50;
+    font-weight: bold;
+    margin: 10px 0;
+}
+
+.status {
+    font-style: italic;
+    margin-bottom: 15px;
+}
+
+.contact {
+    margin-bottom: 15px;
+}
+
+.features {
+    margin: 20px 0;
+}
+
+.action-buttons {
+    display: flex;
+    gap: 15px;
+    margin-top: 30px;
+}
+
+.post-another-btn, .return-home-btn {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.post-another-btn {
+    background-color: #4CAF50;
+    color: white;
+}
+
+.return-home-btn {
+    background-color: #f5f5f5;
+    color: #333;
+}
+
+.error-message {
+    text-align: center;
+    padding: 20px;
+    color: #d32f2f;
+}
+
+/* Edit and Delete Button Styles */
+.edit-btn, .delete-btn, .post-another-btn, .return-home-btn{
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+    margin: 5px;
+}
+
+.edit-btn {
+    background-color: #2196F3;
+    color: white;
+}
+
+.delete-btn {
+    background-color: #f44336;
+    color: white;
+}
+
+.edit-btn:hover {
+    background-color: #0b7dda;
+}
+
+.delete-btn:hover {
+    background-color: #d32f2f;
+}
+
+.action-buttons {
+    display: flex;
+    gap: 15px;
+    margin-top: 30px;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+/* Form Header Style */
+#roomPostForm h2 {
+    color: #4CAF50;
+    margin-bottom: 20px;
+}
+
+/* Frame and Image Preview Styles */
+/* Delete Button Styles */
+.delete-image-btn {
+    position: absolute;
+    top: 5px;
+    right: 5px;
+    width: 25px;
+    height: 25px;
+    background-color: #f44336;
+    color: white;
+    border: none;
+    border-radius: 50%;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 10;
+    transition: all 0.2s ease;
+}
+
+.delete-image-btn:hover {
+    background-color: #d32f2f;
+    transform: scale(1.1);
+}
+
+/* Frame Styles */
+.frame {
+    position: relative;
+    transition: all 0.3s ease;
+}
+
+.frame:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+.preview-img {
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: contain;
+    display: none;
+}
+
+.add-img {
+    width: 50px;
+    height: 50px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+
+
+/* Frame Container Layout */
+.frameMain {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin: 20px 0;
+}
+
+.no-image {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    width: 100%;
+    background-color: #f5f5f5;
+    color: #777;
+    font-style: italic;
+}
+
+/* Ensure the container maintains the same dimensions */
+.room-image-container .no-image,
+.room-images .no-image {
+    height: 200px;
+}
