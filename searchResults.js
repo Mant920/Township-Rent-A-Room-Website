@@ -90,7 +90,7 @@ document.addEventListener('DOMContentLoaded', function() {
                 <div class="room-details">
                     <h3>${room.township}, Extension ${room.extension}</h3>
                     <p class="rent">R${room.rent} per month</p>
-                    <p>Contact: ${room.landlordName} (${room.contactNumber})</p>
+                    <p>Landlord: ${room.landlordName}</p>
                     ${featuresHTML}
                     <button class="contact-btn" data-contact="${room.contactNumber}">Contact Landlord</button>
                 </div>
