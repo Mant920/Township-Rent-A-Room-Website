@@ -119,8 +119,3 @@ function deleteRoom(roomId) {
         window.location.href = 'index.html';
     }
 }
-        
-        alert('Room posting deleted successfully.');
-        window.location.href = 'index.html';
-    }
-}
