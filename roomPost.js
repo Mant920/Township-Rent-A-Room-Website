@@ -150,6 +150,14 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     }
     
+    function generateEditCode(length = 10) {
+    const chars = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789!@#$%^&*';
+    let code = '';
+    for (let i = 0; i < length; i++) {
+        code += chars.charAt(Math.floor(Math.random() * chars.length));
+    }
+    return code;
+}
     // Form submission
     form.addEventListener('submit', function(e) {
         // Prevent form submission if we're just deleting images
@@ -252,6 +260,15 @@ document.addEventListener('DOMContentLoaded', function() {
             localStorage.setItem('rooms', JSON.stringify(rooms));
             localStorage.setItem('lastPostedRoomId', room.id);
             
+             if (!isEditMode) {
+            const editCodes = JSON.parse(localStorage.getItem('editCodes') || '{}');
+            const key = `${room.landlordName.toLowerCase()}_${room.contactNumber}`;
+            if (!editCodes[key]) {
+                const code = generateEditCode();
+                editCodes[key] = code;
+                localStorage.setItem('editCodes', JSON.stringify(editCodes));
+            }
+            }
             if (isEditMode) {
                 localStorage.removeItem('editingRoomId');
                 setTimeout(() => {
@@ -261,7 +278,9 @@ document.addEventListener('DOMContentLoaded', function() {
             } else {
                 window.location.href = `viewPosting.html?id=${room.id}`;
             }
+           
         };
+        
         
         if (totalImages === 0) {
             completeSubmission();
