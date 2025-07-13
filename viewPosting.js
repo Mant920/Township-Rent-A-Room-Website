@@ -82,6 +82,19 @@ document.addEventListener('DOMContentLoaded', function() {
             </div>
         </div>
     `;
+        const editCodes = JSON.parse(localStorage.getItem('editCodes') || '{}');
+        const key = `${room.landlordName.toLowerCase()}_${room.contactNumber}`;
+        const userEditCode = editCodes[key];
+
+        if (userEditCode) {
+            const successMsg = document.querySelector('.success-message');
+            if (successMsg) {
+                const codeDisplay = document.createElement('p');
+                codeDisplay.className = 'edit-code-display';
+                codeDisplay.textContent = `Your Edit Code (save this to edit later): ${userEditCode}`;
+                successMsg.insertAdjacentElement('afterend', codeDisplay);
+            }
+        }
 });
 
 // Edit room function
@@ -101,6 +114,11 @@ function deleteRoom(roomId) {
         if (localStorage.getItem('lastPostedRoomId') === roomId) {
             localStorage.removeItem('lastPostedRoomId');
         }
+        
+        alert('Room posting deleted successfully.');
+        window.location.href = 'index.html';
+    }
+}
         
         alert('Room posting deleted successfully.');
         window.location.href = 'index.html';
