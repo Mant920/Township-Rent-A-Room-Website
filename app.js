@@ -374,4 +374,3 @@ document.addEventListener('DOMContentLoaded', function() {
     const filteredRooms = filterRooms(allRooms, searchParams);
     displayRooms(filteredRooms);
 });
-
