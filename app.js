@@ -1,4 +1,4 @@
-// app.js - Updated version
+
 document.addEventListener('DOMContentLoaded', function() {
     // Township data - can be expanded or fetched from an API
     const townships = [
@@ -90,7 +90,7 @@ document.addEventListener('DOMContentLoaded', function() {
         window.location.href = `searchResults.html?${searchParams.toString()}`;
     }
 }
-    // Autocomplete for townships (modified to prevent duplicate display)
+    // Autocomplete for townships
     function showAutocomplete() {
         const inputValue = townshipInput.value.toLowerCase();
         autocompleteResults.innerHTML = '';
@@ -150,7 +150,7 @@ document.addEventListener('DOMContentLoaded', function() {
     initializeTownshipOptions();
 });
 
-// roomPost.js - Updated version
+// roomPost.js
 document.addEventListener('DOMContentLoaded', function() {
     const form = document.getElementById('roomPostForm');
     const townshipInput = document.getElementById('township');
@@ -232,7 +232,7 @@ document.addEventListener('DOMContentLoaded', function() {
             images: []
         };
         
-        // Get images (simulate storing them)
+        // Get images
         const imageInputs = ['image1', 'image2', 'image3'];
         imageInputs.forEach(id => {
             const input = document.getElementById(id);
@@ -260,7 +260,7 @@ document.addEventListener('DOMContentLoaded', function() {
     initializeTownshipOptions();
 });
 
-// searchResults.js - Updated version
+// searchResults.js
 document.addEventListener('DOMContentLoaded', function() {
     const roomsList = document.getElementById('rooms-list');
     
@@ -374,3 +374,4 @@ document.addEventListener('DOMContentLoaded', function() {
     const filteredRooms = filterRooms(allRooms, searchParams);
     displayRooms(filteredRooms);
 });
+
