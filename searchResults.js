@@ -1,4 +1,4 @@
-// searchResults.js - Updated to use localStorage
+// searchResults.js
 document.addEventListener('DOMContentLoaded', function() {
     const roomsList = document.getElementById('rooms-list');
     
@@ -114,3 +114,4 @@ document.addEventListener('DOMContentLoaded', function() {
     const filteredRooms = filterRooms(allRooms, searchParams);
     displayRooms(filteredRooms);
 });
+
