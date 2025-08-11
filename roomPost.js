@@ -1,4 +1,4 @@
-// roomPost.js - Fixed premature success message on image deletion
+// roomPost.js
 document.addEventListener('DOMContentLoaded', function() {
     const form = document.getElementById('roomPostForm');
     const submitBtn = form.querySelector('button[type="submit"]');
@@ -307,3 +307,4 @@ document.addEventListener('DOMContentLoaded', function() {
     // Initialize the form
     initializeTownshipOptions();
 });
+
