@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../styles/style.css">
+    <title>Post a room</title>
+</head>
+<body>
+    <div class="mainPost">
+        <form id="roomPostForm" enctype="multipart/form-data">
+            <div class="postDiv-1">
+                <label for="landlordName">Name:</label>
+                <input type="text" id="landlordName" name="landlordName" placeholder="Enter your name" required>
+            </div>
+            
+            <div class="postDiv-2">
+                <label for="contactNumber">Contact Number:</label>
+                <input type="tel" id="contactNumber" name="contactNumber" placeholder="012 345 6789" pattern="[0-9]{10}" required>
+            </div>
+
+            <div class="postDiv-3">
+                <label for="township">Kasi Name:</label>
+                <input type="text" id="township" name="township" list="township-options" placeholder="Enter kasi name" required>
+                <datalist id="township-options"></datalist>
+            </div>
+
+            <div class="postDiv-4">
+                <label for="extension">Extension:</label>
+                <input type="number" id="extension" name="extension" min="1" max="100" placeholder="Enter extension number" required>
+            </div>
+
+            <div class="postDiv-5">
+                <label for="rent">Rent (R):</label>
+                <input type="number" id="rent" name="rent" placeholder="Enter amount" min="500" required>
+            </div>
+
+            <div class="postDiv-6">
+                <h4>What does the room have:(select all that apply)</h4>
+                <div class="checkboxes">
+                    <div class="items">
+                        <input type="checkbox" id="prepaidMeter" name="prepaidMeter">
+                        <label for="prepaidMeter">Prepaid Meter</label>
+                    </div>
+                    <div class="items">
+                        <input type="checkbox" id="tiling" name="tiling">
+                        <label for="tiling">Tiling</label>
+                    </div>
+                    <div class="items">
+                        <input type="checkbox" id="burglarDoor" name="burglarDoor">
+                        <label for="burglarDoor">Burglar door</label>
+                    </div>                        
+                </div>
+                <div class="items other">
+                    <label for="otherFeatures">Other:</label>
+                    <input type="text" id="otherFeatures" name="otherFeatures" placeholder="Free wifi etc.">
+                </div>
+            </div>
+
+            <div class="postDiv-7">
+                <label for="parkingSpace">Do you have a parking space?</label>
+                <select id="parkingSpace" name="parkingSpace" required>
+                    <option value="">Select</option>
+                    <option value="true">Yes</option>
+                    <option value="false">No</option>
+                </select>
+            </div>
+
+            <div class="postDiv-8">
+                <label for="availability">Room availability:</label>
+                <select id="availability" name="availability" required>
+                    <option value="available">Available</option>
+                    <option value="not available">Not Available</option>
+                </select>
+            </div>
+
+            <div class="postDiv-9">
+                <div><h4>Add pictures (max 3)</h4></div>
+                <div class="frameMain">
+                    <div class="frame">
+                        <label for="image1" class="icon-upload">
+                            <img src="../utils/plus (1).png" alt="Upload image" class="add-img">
+                            <img id="preview1" class="preview-img" style="display: none;">
+                        </label>
+                        <input type="file" id="image1" name="images" accept="image/*" style="display: none;">
+                    </div>
+                    <div class="frame">
+                        <label for="image2" class="icon-upload">
+                            <img src="../utils/plus (1).png" alt="Upload image" class="add-img">
+                            <img id="preview2" class="preview-img" style="display: none;">
+                        </label>
+                        <input type="file" id="image2" name="images" accept="image/*" style="display: none;">
+                    </div>
+                    <div class="frame">
+                        <label for="image3" class="icon-upload">
+                            <img src="../utils/plus (1).png" alt="Upload image" class="add-img">
+                            <img id="preview3" class="preview-img" style="display: none;">
+                        </label>
+                        <input type="file" id="image3" name="images" accept="image/*" style="display: none;">
+                    </div>
+                </div>
+            </div>
+
+            <div class="postDiv-10">
+                <button type="button" class="back-btn"><a href="../../index.html" class="back-btn">Back</a></button>
+                <button type="submit" class="submit-btn">Post Room</button>
+            </div>
+        </form>
+    </div>
+    <script src="../dom/roomPost.js"></script>
+</body>
+</html>

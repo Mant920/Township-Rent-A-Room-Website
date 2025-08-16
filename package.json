@@ -1,0 +1,26 @@
+{
+  "name": "township-rent-a-room-website",
+  "version": "1.0.0",
+  "description": "A website to show available rooms to rent in the townships",
+  "homepage": "https://github.com/Mant920/Township-Rent-A-Room-Website#readme",
+  "bugs": {
+    "url": "https://github.com/Mant920/Township-Rent-A-Room-Website/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Mant920/Township-Rent-A-Room-Website.git"
+  },
+  "license": "ISC",
+  "author": "Sulaiman & Thato",
+  "type": "module",
+  "main": "app.js",
+  "scripts": {
+    "test": "test"
+  },
+  "devDependencies": {
+    "jasmine": "^5.9.0"
+  },
+  "dependencies": {
+    "dotenv": "^17.2.1"
+  }
+}

@@ -6,34 +6,34 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="./public/styles/style.css">
     <title>Home</title>
 </head>
 <body>
     <div>
-        <a href="" title="Posted a room? Click to edit"><img src="edit.png" alt="edit icon" class="edit-img"></a>
+        <a href="" title="Posted a room? Click to edit"><img src="./public/utils/edit.png" alt="edit icon" class="edit-img"></a>
     </div>
     <div class="main">
         <div class="logo">
-            <img src="logo_rasterized.png" alt="Logo" class="logo-img">
+            <img src="./public/utils/logo_rasterized.png" alt="Logo" class="logo-img">
 
         </div>
         <div class="btn">
             <button type="button">
                 <div class="user">
-                    <div><img src="search.png" alt="searchIcon" class="search-img"></div>
-                    <div class="searchText"><a href="roomSearch.html" class="searchRoom">Look for a room</a></div>
+                    <div><img src="./public/utils/search.png" alt="searchIcon" class="search-img"></div>
+                    <div class="searchText"><a href="./public/html/roomSearch.html" class="searchRoom">Look for a room</a></div>
                 </div>
                 
             </button>
 
         </div>
         <div class="createAcc">
-            <a href="roomPost.html" class="postRoom">Post a room</a>
+            <a href="./public/html/roomPost.html" class="postRoom">Post a room</a>
         </div>
         <button onclick="localStorage.clear(); alert('Cleared!')">Clear Storage</button>
 
     </div>
-    <script src="indexEdit.js"></script>
+    <script src="./public/dom/indexEdit.js"></script>
 </body>
 </html>
